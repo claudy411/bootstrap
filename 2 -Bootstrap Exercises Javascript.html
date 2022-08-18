@@ -24,17 +24,17 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#modal2-open-btn").click(function(){
-                    $("#modal2");   //use the proper bootstrap funtion here
+                    $("#modal2").modal('show');   //use the proper bootstrap funtion here
                 });
 
                 $(".modal2-close").click(function(){
-                    $("#modal2");   //use the proper bootstrap funtion here
+                    $("#modal2").modal('hide');   //use the proper bootstrap funtion here
                 });
 
 
-                $('[data-toggle="tooltip"]');   //use the proper bootstrap funtion here
+                $('[data-toggle="tooltip"]').tooltip();   //use the proper bootstrap funtion here
 
-                $('[data-toggle="popover"]');   //use the proper bootstrap funtion here
+                $('[data-toggle="popover"]').popover();   //use the proper bootstrap funtion here
             });
 
 
@@ -53,21 +53,21 @@
             <h3>Modal exercises</h3>
             <p>Use bootstrap attributes on this one.</p>
             <!-- Button HTML (to Trigger Modal 1) -->
-            <a href="#modal1" class="btn btn-lg btn-primary">Change me to have the modal pop up.</a>
+            <a href="#modal1" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal1">Change me to have the modal pop up.</a>
             
             <!-- Modal 1 HTML -->
             <div id="modal1" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title">Step one, done!</h4>
                         </div>
                         <div class="modal-body">
                             <p>You can close this modal either using the button on the bottom or the &times; on the top right, make sure both work properly. (FYI you can also just click outside of a modal to have it close.)
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default btn-danger">Now change me to have this modal close.</button>
+                            <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Now change me to have this modal close.</button>
                         </div>
                     </div>
                 </div>
